@@ -216,9 +216,18 @@ body, html {
 }
 
 .contact a {
+    text-decoration: none;
     color: white;
-    padding: 25px;
+    padding-left:25px;
 }
+
+.contact a:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
     .sidebar {
