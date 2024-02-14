@@ -3,34 +3,60 @@
     margin: 0;
     padding: 0;
 }
+
+h2 {
+    display: flex;
+    padding:30px;
+    width: 100%;
+    color:black;
+    background-color:rgba(255, 255, 255, 1);
+   /* flex-wrap: wrap;
+    flex-direction: column-reverse; */
+    max-height:80px;
+    justify-content: center;
+}
+
+h3 {
+    display: flex;
+    padding:50px;
+    color:black;
+    background-color:rgba(255, 255, 255, 0.85);
+    justify-content: center;
+}
+
+h4 {
+    margin-bottom: 25px;
+}
 article {
     display: flex;
 }
 body, html {
     height: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url("images/city-buildings-night.jpg");
+  /*  background-image: url("images/city-buildings-night.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center; */
 }
 /*navbar*/
 /*nav bar attributes referenced from W3Schools*/
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    position: sticky;
+    background-color: rgba(0, 0, 0, 1);
+    overflow: hidden; 
+    display: block;
+    z-index: 5000;
+    justify-content: center;
+    position: sticky; 
     top: 0;
+    border-bottom: 2px solid gray;
 }
 
 .navbar ul {
     list-style-type: none;
     padding: 14px 16px;
     display: flex;
-    justify-content: start;
+    /*justify-content: start; */
 }
 
 .navbar ul li {
@@ -57,13 +83,15 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     height: calc(100% - 48px); /* Adjusted height taking navbar into account --used MDN as reference*/
+    margin-top: 10px;
 }
 /*SIDEBAR*/
 .sidebar-left {
     flex: 0 0 25%;
-    background-color: transparent;
     padding: 20px;
     height: 100%;
+    margin-right: 4%;
+    border-right: 2px solid gray;
 }
 
 .sidebar-left ul {
@@ -80,12 +108,15 @@ body, html {
 /*CONTENT*/
 .name {
     color:aliceblue;
-    display: flex
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
 
 }
-.content {
-    flex: 0 0 75%;
-    padding: 20px;
+.content {  
+    /*padding: 20px; */
+    padding-left:15%;
+    padding-right:15%;
     height: 100%;
     overflow-y: auto;
 }
@@ -97,15 +128,27 @@ body, html {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-style: double;
+    opacity: .9;
 }
 .about-me {
     flex-grow: 1;
 }
-.big-row img {
-    width: 10%;
+
+.portfolio {
+    height: 50%;
+    background-image:url(./images/Horiseon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    opacity: .9;
+} 
+
+.big-row .hero {
+    width: 15%;
     height: relative;
     border-radius: 100px;
     box-shadow: 5px;
+    padding: 5px;
 } 
 .columns {
     display: flex;
@@ -120,13 +163,61 @@ body, html {
 
 .row {
     padding: 10px;
+    min-height: 500px;
     margin-bottom: 10px;
     background-color: bisque;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
+.javascript{
+    height: 50%;
+    background-image:url(./images/comingsoon.jpg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+}
+
+.api{
+    height: 50%;
+    background-image:url(./images/burger.png);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+}
+.sql{
+    height: 50%;
+    background-image:url(./images/husky.png);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+}
+.express{
+    height: 50%;
+    background-image:url(./images/jollibee.png);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+}
 /*found from W3 schools */  
 .column .row:last-child {
     margin-bottom: 0;
+}
+
+.contact {
+    margin-top: 25px;
+    padding:20px;
+    text-align:center;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    border-top: 2px solid gray;
+}
+
+.contact a {
+    color: white;
+    padding: 25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -135,5 +226,9 @@ body, html {
     }
     .content {
         flex: 0 0 100%;
+    }
+    .navbar ul li {
+        padding: 0;
+        font-size: .7rem;
     }
 }
