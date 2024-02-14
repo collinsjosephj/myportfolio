@@ -61,7 +61,7 @@ body, html {
 /*SIDEBAR*/
 .sidebar-left {
     flex: 0 0 25%;
-    background-color: #f4f4f4;
+    background-color: transparent;
     padding: 20px;
     height: 100%;
 }
@@ -75,8 +75,14 @@ body, html {
     color: white;
     padding: 5px 0;
     display: block;
+    font-size: auto;
 }
 /*CONTENT*/
+.name {
+    color:aliceblue;
+    display: flex
+
+}
 .content {
     flex: 0 0 75%;
     padding: 20px;
@@ -88,8 +94,9 @@ body, html {
     min-height:100px;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: aqua;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-style: double;
 }
 .about-me {
     flex-grow: 1;
