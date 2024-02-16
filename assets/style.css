@@ -108,13 +108,6 @@ flexbox attributes referenced from MDN and W3 schools
     overflow-y: auto;
 }
 
-.name {
-    color:aliceblue;
-    display: flex;
-    justify-content: center;
-    font-weight: bolder;
-}
-
 .big-row {
     width: 100%;
     min-height:100px;
@@ -200,6 +193,11 @@ flexbox attributes referenced from MDN and W3 schools
     margin-bottom: 0;
 }
 
+/*
+--------FOOTER--------
+This is my footer which is essentially the html footer tag but with the contact class
+*/
+
 .contact {
     margin-top: 25px;
     padding:20px;
@@ -219,6 +217,11 @@ flexbox attributes referenced from MDN and W3 schools
     text-decoration: underline;
     font-weight: bolder;
 }
+
+/*
+--------RESPONSIVE / SCREEN SIZE--------
+this is a WIP, but i need to make my structure appear better on smaller screens (when my flex boxes above are't doing the job).
+*/
 
 @media screen and (min-width: 768px) {
     .content {
