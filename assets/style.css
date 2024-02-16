@@ -42,14 +42,13 @@ article {
 body, html {
     height: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-  /*  background-image: url("images/city-buildings-night.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; */
 }
-/*navbar*/
-/*nav bar attributes referenced from W3Schools*/
+
+/*
+--------NAVBAR--------
+nav bar attributes referenced from W3Schools
+*/
+
 .navbar {
     background-color: rgba(0, 0, 0, 1);
     overflow: hidden; 
@@ -80,6 +79,8 @@ body, html {
     padding: 8px 25px;
     transition: all .5s ease;
 }
+
+/*added hover to navbar*/
 .navbar ul li a:hover 
 {
     background-color: white;
@@ -87,27 +88,33 @@ body, html {
     box-shadow: 0 0 10px white;
     border-radius: 3px;
 }
-/* CONTAINER */
+
+/*
+--------CONTAINER--------
+flexbox attributes referenced from MDN and W3 schools
+*/
+
 .container {
     display: flex;
     flex-wrap: wrap;
     height: calc(100% - 48px); /* Adjusted height taking navbar into account --used MDN as reference*/
     margin-top: 10px;
 }
-/*CONTENT*/
+
 .content {  
-    /*padding: 20px; */
     padding-left:15%;
     padding-right:15%;
     height: 100%;
     overflow-y: auto;
 }
+
 .name {
     color:aliceblue;
     display: flex;
     justify-content: center;
     font-weight: bolder;
 }
+
 .big-row {
     width: 100%;
     min-height:100px;
@@ -118,6 +125,7 @@ body, html {
     border-style: double;
     opacity: .9;
 }
+
 .about-me {
     flex-grow: 1;
 }
@@ -138,11 +146,13 @@ body, html {
     box-shadow: 5px;
     padding: 5px;
 } 
+
 .columns {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 .column {
     display: flex;
     flex-direction: column;
@@ -163,7 +173,6 @@ body, html {
     opacity: .9;
 }
 
-
 .javascript {
     background-image:url(./images/comingsoon.jpg);
 }
@@ -176,19 +185,17 @@ body, html {
     background-image:url(./images/husky.png);
 }
 .express {
-
     background-image:url(./images/jollibee.png);
 }
 
+/* added CSS :hover effect for look and feel */
 .grid:hover {
-    /*min-height: 250px; */
     background-image: none;
     background-color: black;
     transition: all .5s ease;
-
 }
 
-/*found from W3 schools */  
+/* referenced from W3 schools */  
 .column .row:last-child {
     margin-bottom: 0;
 }
@@ -208,11 +215,20 @@ body, html {
     padding-left:25px;
 }
 
-.contact a:hover{
+.contact a:hover {
     text-decoration: underline;
     font-weight: bolder;
 }
 
+@media screen and (min-width: 768px) {
+    .content {
+        flex: 0 0 100%;
+    }
+    .navbar ul li {
+        padding: 0;
+        font-size: .7rem;
+    }
+}
 @media screen and (max-width: 768px) {
     .content {
         flex: 0 0 100%;
